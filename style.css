@@ -1,0 +1,175 @@
+html {
+  font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  background: #181a1b;
+  color: #a8b4a5;
+}
+
+body {
+  color: #a8b4a5;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  font-size: bold;
+}
+
+p {
+  font-size: 16px;
+  margin: 10px;
+}
+
+#toolContainer {
+  display: flex;
+  width: 258px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  background-color: #336699;
+  font-size: 24px;
+  border: 10px;
+  margin: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 4;
+
+  transition: scale 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #7b6d8d;
+  scale: 1.05;
+}
+
+#textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#text {
+  text-align: center;
+}
+
+#allContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#modelStatus {
+  text-decoration: underline;
+  font-weight: 900;
+  text-align: center;
+  width: 150px;
+}
+
+#canvasContainer {
+  height: 512px;
+  width: 512px;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+#btnContainer {
+  margin: 0 20px;
+  align-content: center;
+  justify-content: center;
+}
+
+#toolContainer {
+  width: 512px;
+  margin: 0 20px;
+}
+
+#colorContainer {
+  background-color: #336699;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 5px;
+}
+
+#red {
+  background-color: #ff0000;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: 10px;
+  transition: scale 0.3s ease-in-out;
+}
+
+#red:hover {
+  scale: 1.1;
+}
+
+#blue {
+  background-color: #0000ff;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin: 10px;
+  transition: scale 0.3s ease-in-out;
+}
+
+#blue:hover {
+  scale: 1.1;
+}
+
+.selected {
+  border: #efbc9b 4px solid;
+}
+
+.unselected {
+  border: #181a1b 4px solid;
+}
+
+#sliderContainer {
+  display: flex;
+  background-color: #336699;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+#sliderLabel {
+  font-size: 16px;
+  margin: 0px;
+  color: #fff;
+  font-weight: 600;
+}
+
+#strokeWeightSlider {
+  width: 80%;
+  height: 15px;
+  border-radius: 5px;
+  background: #a8b4a5;
+  margin: 0 25px;
+  margin-bottom: 0px;
+}
+
+#sliderOutput {
+  font-size: 16px;
+  margin: 0px;
+  color: #fff;
+  font-weight: 600;
+}
+
+#modelOutput {
+  height: 512px;
+  width: 512px;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 20px;
+}

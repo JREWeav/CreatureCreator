@@ -1,0 +1,74 @@
+<html>
+  <head>
+    <!-- Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"
+    />
+
+    <!-- CSS Reset -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+
+    <!-- Milligram CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.1.2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/checkpointLoader.js"></script>
+    <script src="./js/pix2pix.js"></script>
+    <script src="./js/sketch.js"></script>
+  </head>
+  <body>
+    <div id="textContainer">
+      <div id="text">
+        <h1>Creature Creator!</h1>
+        <p>Welcome to Creature Creator.</p>
+        <p>Draw using red to give the model the silhoutte of a cat</p>
+        <p>Draw using blue to give the model the silhoutte of a dog</p>
+      </div>
+    </div>
+    <div id="allContainer">
+
+        <div>
+          <div id="toolContainer" class="flex flex-space-between">
+            <div id="colorContainer">
+              <div id="red" class="selected" onClick="selectRed()"></div>
+              <div id="blue" class="unselected" onClick="selectBlue()"></div>
+            </div>
+            <div id="sliderContainer">
+              <label id="sliderLabel">Stroke Weight</label>
+              <input
+                type="range"
+                min="10"
+                max="100"
+                value="20"
+                class="slider"
+                oninput="changeStrokeWeight(); this.nextElementSibling.value = this.value"
+                id="strokeWeightSlider"
+              />
+              <output id="sliderOutput">20</output>
+            </div>
+            <button class="flex line-height" onClick="selectEraser()">
+              <label>Eraser</label>
+            </button>
+          </div>
+          <div id="canvasContainer"></div>
+          <div id="btnContainer" class="flex flex-space-between">
+            <button id="clearButton" onClick="clearCanvas()">Clear</button>
+          </div>
+        </div>
+        <p id="modelStatus">Loading...</p>
+
+        <div id="modelOutput"></div>
+
+  </body>
+</html>
